@@ -6,13 +6,16 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "dependencies": {
     "expo": "^50.0.2",
+    "expo-location": "~16.5.2",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.2"
+    "react-native": "0.73.2",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -20,6 +23,7 @@
     "@types/jest": "^29.5.11",
     "@types/react": "^18.2.48",
     "@types/react-test-renderer": "^18.0.7",
+    "prettier": "^3.2.4",
     "typescript": "^5.3.3"
   },
   "private": true
