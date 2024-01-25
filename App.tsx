@@ -1,35 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import * as Location from 'expo-location';
-import * as S from './App.styles';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
-async function getLocation() {
-  let { status } = await Location.requestForegroundPermissionsAsync();
-  if (status !== 'granted') {
-    console.error('Permission to access location was denied');
-    return;
-  }
+import { RootStackParamList } from './types';
+import Home from './screens/Home';
+import Details from './screens/Details';
 
-  let location = await Location.getCurrentPositionAsync({});
-  console.log(location);
-}
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
-  getLocation();
   return (
-    <View style={styles.container}>
-      <S.Text>This week</S.Text>
-      <S.Text>Explore</S.Text>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
+      </Stack.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
