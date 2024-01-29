@@ -1,4 +1,5 @@
 export type RootStackParamList = {
   Home: undefined;
-  Details: { itemId: number; otherParam: string };
+  Map: { itemId: number; otherParam: string };
+  Form: undefined;
 };

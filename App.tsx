@@ -4,7 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { RootStackParamList } from './types';
 import Home from './screens/Home';
-import Details from './screens/Details';
+import Map from './screens/Map';
+import Form from './screens/Form';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -13,7 +14,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Map" component={Map} />
+        <Stack.Screen name="Form" component={Form} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>

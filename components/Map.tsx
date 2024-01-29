@@ -26,7 +26,7 @@ async function getLocation() {
   return location;
 }
 
-export default function Map() {
+export function MapComponent() {
   const [location, setLocation] = useState<LocationObject | null>(null);
 
   useEffect(() => {
