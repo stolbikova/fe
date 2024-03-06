@@ -22,9 +22,9 @@ export const fontWeight = {
 };
 
 export const spacing = {
-  small: '8px',
-  medium: '16px',
-  large: '24px',
+  small: 8,
+  medium: 16,
+  large: 24,
   // ... more spacings
 };
 

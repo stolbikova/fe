@@ -1,5 +1,6 @@
 import { Platform, Alert } from 'react-native';
 import { isDevice } from 'expo-device';
+import Constants from 'expo-constants';
 import {
   getPermissionsAsync,
   requestPermissionsAsync,
@@ -22,7 +23,14 @@ export async function registerForPushNotificationsAsync() {
       Alert.alert('Failed to get push token for push notification!');
       return;
     }
-    token = (await getExpoPushTokenAsync()).data;
+
+    const projectId = Constants.expoConfig?.extra?.eas.projectId;
+    console.log('PROJECT ID', projectId);
+    token = (
+      await getExpoPushTokenAsync({
+        projectId: projectId || 'your-project-id',
+      })
+    ).data;
   } else {
     Alert.alert('Must use physical device for Push Notifications');
   }

@@ -10,7 +10,7 @@ import {
 export const Container = styled.View`
   flex: 1;
   justify-content: center;
-  padding: ${spacing.small};
+  padding: ${spacing.small}px;
 `;
 
 export const Text = styled.Text`

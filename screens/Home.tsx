@@ -36,8 +36,12 @@ export default function Home({ navigation }: any) {
 
   return (
     <S.Container>
-      <Button title="Go to Form" onPress={() => navigation.navigate('Form')} />
+      <Button
+        title="Go to Travel app"
+        onPress={() => navigation.navigate('Form')}
+      />
       <Button title="Go to Map" onPress={() => navigation.navigate('Map')} />
+      <Button title="Go to Chat" onPress={() => navigation.navigate('Chat')} />
     </S.Container>
   );
 }

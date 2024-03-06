@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "AwesomeProject",
+    "projectId": "your-project-id",
     "slug": "AwesomeProject",
     "version": "1.0.0",
     "orientation": "portrait",
